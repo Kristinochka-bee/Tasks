@@ -46,6 +46,7 @@ public class ArrayLists {
         System.out.println(linkedList);
         System.out.println(linkedList.removeLast());
         System.out.println(linkedList);
+        linkedList.remove(1);
 
 
         //Доступ к элементу и поиск в списке
@@ -53,8 +54,40 @@ public class ArrayLists {
         System.out.println(arrayElem);
         System.out.println(linkedList.indexOf("Bobbi"));
 
+        /*
+        public void addWithIndex(int index, int element) {
+            if(count == size) {
+                growSize();
+            }
+            for (int i = index+1; i < size; i++) {
+                data[i] = data[i-1];
+
+            }
+            data[index] = element;
+        }
+
+         */
+
+        /*
+        public void addToStart(int element) {
+            if(count == size) {
+                Integer[] newData = new Integer[size*2];
+                for (int i = 0; i < size; i++) {
+                    newData[i] = data[i];
+
+                }
+                data = newData;
+                size = data.length;
+
+            }
+            for (int i = size-2; i >=0 ; i--) {
+                data[i+1] = data[i];
+
+            }
+            data[0] = element;
+        }
 
 
-
+         */
     }
 }
