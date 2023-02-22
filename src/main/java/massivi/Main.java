@@ -2,6 +2,9 @@ package massivi;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +17,8 @@ public class Main {
         TicTackToe game = new TicTackToe(); //создаем объект нашего класса
         //window.add(game); //добавляем наш объект в окно
         System.out.println("End...");
+
+      Set<Integer> newList = new TreeSet<>();
 
     }
 
