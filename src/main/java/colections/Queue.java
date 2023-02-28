@@ -27,9 +27,9 @@ public class Queue {
         q.pushToEnd(1);
         q.pushToEnd(2);
         q.pushToEnd(3);
-        q.pushToEnd(5);
-        q.remove();
-        System.out.println(q);
+
+        System.out.println(q.size());
+
 
 
     }
@@ -89,8 +89,17 @@ public class Queue {
         }
    }
 
-   public void peek(){}
+   public int peek(){
+        if(isEmpty()){
+            System.out.println("Queue is empty");
+            return -1;
+        }
+            return arr[head];
+   }
 
+   public int size(){
+        return capacity;
+   }
 
     @Override
     public String toString() {
