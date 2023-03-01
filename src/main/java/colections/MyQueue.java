@@ -2,39 +2,29 @@ package colections;
 
 import java.util.Arrays;
 
-public class Queue {
-    // Классическая Queue - реализовать используя массив (Array)
-    //    pushToEnd(int data) - вставляет элемент в конец queue
-    //    remove() - удаляет элемент из начала queue
-    //    peek() - возвращает элемент из начала не удаляя его
-    //    isEmpty()
-    //    size()
-    //
-    //начало:
-        private int[] arr;      // массив для хранения элементов queue
-        private int head;      // head указывает на первый элемент в queue
-        private int tail;       // tail часть указывает на последний элемент в queue
-        private int capacity;   // максимальная емкость queue
-        private int count;      // текущий размер queue
+public class MyQueue {
 
-
-
-
-    //// Конструктор для инициализации queue
     public static void main(String[] args) {
-
-        Queue q = new Queue(3);
+        MyQueue q = new MyQueue(3);
         q.pushToEnd(1);
         q.pushToEnd(2);
         q.pushToEnd(3);
+        q.pushToEnd(4);
+        q.pushToEnd(4);
 
-        System.out.println(q.size());
+        System.out.println( q.toString());
+        q.remove();
+        System.out.println( q.toString());
 
-
-
+        System.out.println(q.peek());
     }
+    private int[] arr;      // массив для хранения элементов queue
+    private int head;      // head указывает на первый элемент в queue
+    private int tail;       // tail часть указывает на последний элемент в queue
+    private int capacity;   // максимальная емкость arr
+    private int count;      // текущий размер queue
 
-    public Queue(int size){
+    public MyQueue(int size) {
         arr = new int[size];
         capacity = size;
         head = 0;
@@ -42,9 +32,8 @@ public class Queue {
         count = 0;
     }
 
-    public void pushToEnd(int elem){
-
-        if (isFull() ){
+    public void pushToEnd(int elem) { // pushToEnd(int data) - вставляет элемент в конец queue
+        if (isFull()) {
             System.out.println("Queue is full");
 
         }else{
@@ -89,15 +78,16 @@ public class Queue {
         }
    }
 
-   public int peek(){
+    public int peek(){
         if(isEmpty()){
             System.out.println("Queue is empty");
             return -1;
         }
-            return arr[head];
-   }
+        return arr[head];
+    }
 
-   public int size(){
+
+    public int size(){
         return capacity;
    }
 
