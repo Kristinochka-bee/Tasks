@@ -1,4 +1,4 @@
-package linked.list;
+package colections.list;
 
 
 

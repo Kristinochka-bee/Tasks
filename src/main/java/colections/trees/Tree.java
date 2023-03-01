@@ -1,4 +1,4 @@
-package trees;
+package colections.trees;
 
 import java.util.Stack;
 

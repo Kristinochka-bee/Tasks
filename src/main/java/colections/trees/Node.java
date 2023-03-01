@@ -1,4 +1,4 @@
-package trees;
+package colections.trees;
 
 public class Node {
     private int value; // ключ узла

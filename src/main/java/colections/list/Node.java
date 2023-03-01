@@ -1,4 +1,4 @@
-package linked.list;
+package colections.list;
 
 public class Node {
     private final Integer data;
