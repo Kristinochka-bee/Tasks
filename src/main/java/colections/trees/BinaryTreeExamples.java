@@ -1,4 +1,5 @@
 package colections.trees;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -23,22 +24,32 @@ public class BinaryTreeExamples {
                 )
         );
 
+
+        /*
         System.out.println("Sum using recurse = " + binaryTree.sum());
         System.out.println("Sum using non-recurse = " + binaryTree.sumNonRecurse());
         System.out.println("Sum using non-recurse (wide) = " + binaryTree.sumNonRecurseWide());
 
 
- */
+         */
+
+
         BinaryTree binaryTree = new BinaryTree (10);
         binaryTree.pushToTail(5);
         binaryTree.pushToTail(5);
         binaryTree.pushToTail(3);
+        binaryTree.pushToTail(3);
+        binaryTree.pushToTail(1);
         binaryTree.pushToTail(12);
+        binaryTree.pushToTail(11);
+        binaryTree.pushToTail(15);
         binaryTree.pushToTail(2);
         System.out.println(binaryTree);
 
-        binaryTree.removeElem(2);
-        System.out.println(binaryTree);
+
+
+       // binaryTree.removeElem(2);
+       // System.out.println(binaryTree);
 
     }
 }
@@ -51,6 +62,10 @@ class BinaryTree {
         this.value = value;
         this.left = left;
         this.right = right;
+    }
+
+    public int getValue() {
+        return value;
     }
 
     public BinaryTree(int value) {
@@ -124,6 +139,9 @@ class BinaryTree {
     }
 
     public void pushToTail(int elem) {
+        if (elem == value){
+            return;
+        }
                 if (elem < value){
                     if (left == null) {
                         left = new BinaryTree(elem);
@@ -134,11 +152,15 @@ class BinaryTree {
                 }else {
                     if (right == null) {
                         right = new BinaryTree(elem);
-                    }else{
+                    }else {
                         right.pushToTail(elem);
                     }
+
                 }
-    }
+        }
+
+
+
     public void removeElem(int elem){
         if (elem < value){
             if (left.value == elem){
@@ -156,6 +178,9 @@ class BinaryTree {
     }
 
 
+
+
+
     @Override
     public String toString() {
         return "BinaryTree{" +
@@ -164,4 +189,8 @@ class BinaryTree {
                 ", right=" + right +
                 '}';
     }
+
+
+
+
 }
