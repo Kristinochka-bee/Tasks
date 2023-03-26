@@ -1,4 +1,5 @@
-package algoritms.greedyAlgoritm;
+package algoritms.greedyAlgoritm.shedule;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +37,6 @@ public class Shedule {
         for (int i = 9; i <= 17; i++ ){
             System.out.println( i + " " + schedule[i]);
         }
-
 
 
         //найти время которое заканчивается позже всех

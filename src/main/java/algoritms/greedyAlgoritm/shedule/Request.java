@@ -1,4 +1,4 @@
-package algoritms.greedyAlgoritm;
+package algoritms.greedyAlgoritm.shedule;
 
 public class Request {
     private String name;

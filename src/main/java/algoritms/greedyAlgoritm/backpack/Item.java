@@ -1,4 +1,4 @@
-package algoritms;
+package algoritms.greedyAlgoritm.backpack;
 public class Item {
     private Double price;
     private Double weight;
