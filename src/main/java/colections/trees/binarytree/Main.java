@@ -3,7 +3,7 @@ package colections.trees.binarytree;
 public class Main {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
-        tree.insert(5, "1");
+        tree.insert(5, "5");
         tree.insert(3, "3");
         tree.insert(7, "7");
         tree.insert(1, "1");
@@ -17,7 +17,7 @@ public class Main {
 
         tree.print();
         System.out.println("-----------------------------------------------");
-        tree.deleteNode(5);
+        tree.deleteNode(3);
         tree.print();
     }
 }

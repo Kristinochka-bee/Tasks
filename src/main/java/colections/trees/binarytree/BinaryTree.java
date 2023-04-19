@@ -1,7 +1,5 @@
 package colections.trees.binarytree;
 
-
-
 public class BinaryTree {
     Node root;
 
@@ -36,20 +34,33 @@ public class BinaryTree {
             return findRec(root.left, key);
         return findRec(root.right, key);
     }
+public void deleteNode(int key){
+        root = deleteNodeRec(root, key);
+}
+
+/*
+private Node deleteNodeRec(Node root, int key){
+        if (key < root.key){
+            return deleteNodeRec(root.left,key);
+        }else if (key > root.key){
+            return deleteNodeRec(root.right,key);
+        } else{
+
+            return deleteNodeRec(root,key);
+        }
+}
+
+ */
 
 
-    public void deleteNode(int key) {
-        root = deleteNode(root, key);
-    }
-
-    private Node deleteNode(Node root, int key) {
+    private Node deleteNodeRec(Node root, int key) {
         if (root == null) {
             return null;
         }
         if (key < root.key) {
-            root.left = deleteNode(root.left, key);
+            root.left = deleteNodeRec(root.left, key);
         } else if (key > root.key) {
-            root.right = deleteNode(root.right, key);
+            root.right = deleteNodeRec(root.right, key);
         } else {
             if (root.left == null) {
                 return root.right;
@@ -57,7 +68,7 @@ public class BinaryTree {
                 return root.left;
             }
             root.key = findMin(root.right).key; //перезапись
-            root.right = deleteNode(root.right, root.key);
+            root.right = deleteNodeRec(root.right, root.key);
         }
         return root;
     }
