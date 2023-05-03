@@ -27,8 +27,6 @@ public class Hash {
         System.out.println(Arrays.compare(arr1,arr4));
 
 
-
-
     }
 
 
@@ -72,6 +70,11 @@ public class Hash {
     }
 
 
+  /*  for (Map.Entry<Place, Guest> entry : hashMap.entrySet()) {
+        System.out.println(entry.getKey().getNumber() + " : " + entry.getValue().getName());
+    }
+
+   */
 }
 
 
